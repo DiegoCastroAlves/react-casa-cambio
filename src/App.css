@@ -100,6 +100,11 @@ img {
   color: #ffe713;
 }
 
+.same-currency {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
 @media screen and (max-width: 950px) {
   main {
     padding-top: 50px;
@@ -107,27 +112,25 @@ img {
 
   section {
     grid-template-columns: repeat(4, 1fr);
-    width: 700px;
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (max-height: 850px) {
+  section {
+    height: calc(100vh - 260px);
   }
 }
 
 @media screen and (max-width: 750px) {
   section {
     grid-template-columns: repeat(3, 1fr);
-    width: 500px;
   }
 }
 
 @media screen and (max-width: 550px) {
   section {
     grid-template-columns: repeat(2, 1fr);
-    width: 450px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  section {
-    width: 380px;
   }
 }
 
@@ -138,7 +141,6 @@ img {
 
   section {
     flex-direction: column;
-    width: 280px;
   }
 }
 
@@ -156,8 +158,13 @@ img {
   input {
     width: 130px;
   }
+}
 
+@media screen and (max-width: 310px) {
   section {
-    width: 280px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .currency-icon {
+    display: inline;
   }
 }
