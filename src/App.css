@@ -1,0 +1,163 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h1 span {
+  color: #95eba8;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input:focus {
+  outline: 1px solid rgba(217, 217, 217, 0.555);
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(217, 217, 217, 0.102);
+  border: 0px;
+  width: 171px;
+  height: 48px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #95eba8c5;
+  transition: 0.2s;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #95eba8;
+  color: #373737;
+  border: 0px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  width: 171px;
+  height: 48px;
+  transition: 0.2s;
+}
+
+section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+section {
+  padding: 15px;
+  width: 900px;
+  height: 583px;
+  background-color: rgba(250, 252, 254, 0.06);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.currency {
+  display: flex;
+  justify-content: space-between;
+}
+img {
+  margin-right: 10px;
+}
+.currency-value {
+  color: #ffe713;
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    padding-top: 50px;
+  }
+
+  section {
+    grid-template-columns: repeat(4, 1fr);
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .currency-icon {
+    display: none;
+  }
+
+  section {
+    flex-direction: column;
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  h1,
+  h1 span {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  button,
+  input {
+    width: 130px;
+  }
+
+  section {
+    width: 280px;
+  }
+}
