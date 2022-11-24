@@ -20,6 +20,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const url = `https://api.exchangerate.host/latest?base=${currency}`;
+
     if (currency === '') {
       errorMessages('Campo vazio!');
     } else {
